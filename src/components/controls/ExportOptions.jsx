@@ -32,7 +32,7 @@ export default function ExportOptions({ targetRef }) {
       navigator.clipboard.write([img])
 
       toast.remove(loading)
-      toast.success("Image copied to clipboard!")
+      toast.success("Image copiée dans le presse-papiers !")
     } catch (error) {
       toast.remove(loading)
       toast.error("Something went wrong!")
@@ -48,7 +48,7 @@ export default function ExportOptions({ targetRef }) {
       }).toString()
       navigator.clipboard.writeText(`${location.href}?${queryParams}`)
 
-      toast.success("Link copied to clipboard!")
+      toast.success("Lien copié dans le presse-papiers !")
     } catch (error) {
       toast.error("Something went wrong!")
     }
@@ -79,7 +79,7 @@ export default function ExportOptions({ targetRef }) {
       a.click()
 
       toast.remove(loading)
-      toast.success("Exported successfully!")
+      toast.success("Image téléchargée avec succès !")
     } catch (error) {
       toast.remove(loading)
       toast.error("Something went wrong!")
@@ -94,38 +94,32 @@ export default function ExportOptions({ targetRef }) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button>
+        <Button variant="secondary">
           <Share2Icon className="mr-2" />
-          Export
+          Exporter
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="dark">
-        <DropdownMenuItem className="gap-2" onClick={copyImage}>
-          <ImageIcon />
-          Copy Image
-          <DropdownMenuShortcut>⌘C</DropdownMenuShortcut>
+        <DropdownMenuItem onClick={copyImage}>
+          <ImageIcon className="mr-2" />
+          Copier l'image
+          <DropdownMenuShortcut>⌘+C</DropdownMenuShortcut>
         </DropdownMenuItem>
-        <DropdownMenuItem className="gap-2" onClick={copyLink}>
-          <Link2Icon />
-          Copy Link
-          <DropdownMenuShortcut>⇧⌘C</DropdownMenuShortcut>
+        <DropdownMenuItem onClick={copyLink}>
+          <Link2Icon className="mr-2" />
+          Copier le lien
+          <DropdownMenuShortcut>⌘+L</DropdownMenuShortcut>
         </DropdownMenuItem>
         <DropdownMenuSeparator />
-        <DropdownMenuItem
-          className="gap-2"
-          onClick={() => saveImage(title, "PNG")}
-        >
-          <DownloadIcon />
-          Save as PNG
-          <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
+        <DropdownMenuItem onClick={() => saveImage(title, "PNG")}>
+          <DownloadIcon className="mr-2" />
+          Télécharger
+          <DropdownMenuShortcut>⌘+S</DropdownMenuShortcut>
         </DropdownMenuItem>
-        <DropdownMenuItem
-          className="gap-2"
-          onClick={() => saveImage(title, "SVG")}
-        >
-          <DownloadIcon />
-          Save as SVG
-          <DropdownMenuShortcut>⇧⌘S</DropdownMenuShortcut>
+        <DropdownMenuItem onClick={() => saveImage(title, "SVG")}>
+          <DownloadIcon className="mr-2" />
+          Télécharger
+          <DropdownMenuShortcut>⌘+S</DropdownMenuShortcut>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

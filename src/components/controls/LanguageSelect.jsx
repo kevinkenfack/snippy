@@ -24,7 +24,7 @@ export default function LanguageSelect() {
   return (
     <div>
       <label className="block mb-2 text-xs font-medium text-neutral-400">
-        Language
+        Langage
       </label>
       <Select value={language} onValueChange={handleChange}>
         <SelectTrigger className="w-40">
@@ -32,7 +32,7 @@ export default function LanguageSelect() {
           <SelectValue placeholder="Select Language" />
         </SelectTrigger>
         <SelectContent className="dark max-h-[500px]">
-          <SelectItem value="auto-detect">Auto Detect</SelectItem>
+          <SelectItem value="auto-detect">Détection auto</SelectItem>
           {Object.entries(languages).map(([lang, name]) => (
             <SelectItem key={lang} value={lang}>
               {name}

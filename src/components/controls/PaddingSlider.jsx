@@ -7,7 +7,7 @@ export default function PaddingSlider() {
   return (
     <div>
       <label className="block mb-2 text-xs font-medium text-neutral-400">
-        Padding
+        Marge interne
       </label>
       <Slider
         className="w-44 my-5"

@@ -7,7 +7,7 @@ export default function DarkModeSwitch() {
   return (
     <div>
       <label className="block mb-2 text-xs font-medium text-neutral-400">
-        DarkMode
+        Mode sombre
       </label>
       <Switch
         checked={darkMode}

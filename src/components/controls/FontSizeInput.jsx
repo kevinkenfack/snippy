@@ -7,7 +7,7 @@ export default function FontSizeInput() {
   return (
     <div>
       <label className="block mb-2 text-xs font-medium text-neutral-400">
-        Font Size
+        Taille de police
       </label>
       <Input
         type="number"

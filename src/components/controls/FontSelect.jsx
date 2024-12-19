@@ -14,7 +14,7 @@ export default function FontSelect() {
   return (
     <div>
       <label className="block mb-2 text-xs font-medium text-neutral-400">
-        Font
+        Police
       </label>
       <Select
         value={fontStyle}
