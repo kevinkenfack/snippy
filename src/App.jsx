@@ -46,7 +46,7 @@ function App() {
 
   if (!showEditor) {
     return (
-      <main className="dark min-h-screen flex flex-col items-center justify-center bg-neutral-950 text-white relative overflow-hidden">
+      <main className="dark min-h-screen flex flex-col items-center justify-center bg-neutral-950 text-white relative overflow-hidden px-4">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -inset-[10px] opacity-50">
             <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob" />
@@ -55,18 +55,18 @@ function App() {
           </div>
         </div>
 
-        <div className="relative max-w-3xl text-center space-y-12 p-8">
-          <div className="space-y-6">
+        <div className="relative max-w-3xl text-center space-y-8 sm:space-y-12 p-4 sm:p-8">
+          <div className="space-y-4 sm:space-y-6">
             <div className="relative">
-              <CodeIcon className="w-24 h-24 mx-auto text-purple-500 transform hover:scale-110 transition-transform duration-300" />
+              <CodeIcon className="w-16 h-16 sm:w-24 sm:h-24 mx-auto text-purple-500 transform hover:scale-110 transition-transform duration-300" />
               <div className="absolute inset-0 bg-purple-500/20 blur-3xl -z-10" />
             </div>
             
-            <h1 className="text-7xl font-bold bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 text-transparent bg-clip-text animate-gradient">
+            <h1 className="text-4xl sm:text-7xl font-bold bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 text-transparent bg-clip-text animate-gradient">
               Snippy
             </h1>
             
-            <p className="text-2xl text-neutral-300 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-lg sm:text-2xl text-neutral-300 leading-relaxed max-w-2xl mx-auto">
               Créez de superbes captures d'écran de votre code en quelques clics. 
               <span className="block mt-2 text-neutral-400">
                 Personnalisez les thèmes, les polices et exportez en haute qualité.
@@ -74,11 +74,11 @@ function App() {
             </p>
           </div>
 
-          <div className="flex gap-6 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
             <Button 
               size="lg"
               onClick={() => setShowEditor(true)}
-              className="bg-purple-500 hover:bg-purple-600 text-white px-12 py-8 text-xl rounded-2xl transform hover:scale-105 transition-all duration-200 shadow-lg shadow-purple-500/25"
+              className="w-full sm:w-auto bg-purple-500 hover:bg-purple-600 text-white px-8 sm:px-12 py-6 sm:py-8 text-lg sm:text-xl rounded-xl sm:rounded-2xl transform hover:scale-105 transition-all duration-200 shadow-lg shadow-purple-500/25"
             >
               Commencer
             </Button>
@@ -87,13 +87,13 @@ function App() {
               size="lg"
               variant="outline"
               onClick={() => window.open('https://github.com/kevinkenfack/snippy', '_blank')}
-              className="border-2 border-neutral-700 hover:bg-neutral-800 px-12 py-8 text-xl rounded-2xl transform hover:scale-105 transition-all duration-200"
+              className="w-full sm:w-auto border-2 border-neutral-700 hover:bg-neutral-800 px-8 sm:px-12 py-6 sm:py-8 text-lg sm:text-xl rounded-xl sm:rounded-2xl transform hover:scale-105 transition-all duration-200"
             >
               GitHub
             </Button>
           </div>
 
-          <div className="pt-12 text-base text-neutral-500 hover:text-neutral-400 transition-colors">
+          <div className="pt-8 sm:pt-12 text-sm sm:text-base text-neutral-500 hover:text-neutral-400 transition-colors">
             Créé avec <span className="text-red-500 animate-pulse">♥️</span> par Kevin Kenfack
           </div>
         </div>
